@@ -37,7 +37,7 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
-        <div>
+        <div style={{ flex: 1 }}>
           <Helmet
             titleTemplate="云音乐"
             defaultTitle="cloudmusic"
@@ -55,7 +55,7 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
 App.propTypes = {
   children: React.PropTypes.node,
   requestUserInfo: React.PropTypes.func,
-  loggedIn: React.PropTypes.bool,
+  loggedIn: React.PropTypes.string,
   userInfo: React.PropTypes.object,
 };
 

@@ -18,9 +18,10 @@ injectGlobal`
   }
 
   #app {
-    min-height: 100%;
-    min-width: 100%;
-    background-color: #EBEFF2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #FFF;
   }
   body,
   dl,
