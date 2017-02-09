@@ -50,7 +50,6 @@ export default function createRoutes(store) {
   return [
     {
       path: '/',
-      onEnter: checkNRefreshToken(),
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           System.import('containers/Dashboard'),
@@ -80,26 +79,57 @@ export default function createRoutes(store) {
 
               importModules.catch(errorLoading);
             },
-            childRoutes: [
-              {
-                indexRoute: {
-                  getComponent(nextState, cb) {
-                    const importModules = Promise.all([
-                      System.import('containers/FindMusic'),
-                    ]);
-
-                    const renderRoute = loadModule(cb);
-
-                    importModules.then(([component]) => {
-                      renderRoute(component);
-                    });
-
-                    importModules.catch(errorLoading);
-                  },
-                }
-              }
-            ],
           },
+        },
+        {
+          path: '/home',
+          getComponent(nextState, cb) {
+            const importModules = Promise.all([
+              System.import('containers/HomePage'),
+            ]);
+
+            const renderRoute = loadModule(cb);
+
+            importModules.then(([component]) => {
+              renderRoute(component);
+            });
+
+            importModules.catch(errorLoading);
+          },
+          childRoutes: [
+            {
+              path: '/home/findmusic',
+              getComponent(nextState, cb) {
+                const importModules = Promise.all([
+                  System.import('containers/FindMusic'),
+                ]);
+
+                const renderRoute = loadModule(cb);
+
+                importModules.then(([component]) => {
+                  renderRoute(component);
+                });
+
+                importModules.catch(errorLoading);
+              },
+            },
+            {
+              path: '/home/privateFM',
+              getComponent(nextState, cb) {
+                const importModules = Promise.all([
+                  System.import('containers/PrivateFM'),
+                ]);
+
+                const renderRoute = loadModule(cb);
+
+                importModules.then(([component]) => {
+                  renderRoute(component);
+                });
+
+                importModules.catch(errorLoading);
+              },
+            },
+          ],
         },
       ],
     },

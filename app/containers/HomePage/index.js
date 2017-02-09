@@ -8,6 +8,7 @@ import LeftNav from './LeftNav';
 
 const HomeContainer = styled.div`
   flex: 1;
+  display: flex;
 `;
 
 export default class HomePage extends Component { // eslint-disable-line react/prefer-stateless-function

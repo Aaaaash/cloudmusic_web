@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { browserHistory } from 'react-router';
 
 const ListTitle = styled.h3`
   color: #7D7D7D;
@@ -27,10 +28,10 @@ class MenuList extends Component {
       <div>
         <ListTitle>推荐</ListTitle>
         <ul>
-          <ListItem>发现音乐</ListItem>
-          <ListItem>死人FM</ListItem>
-          <ListItem>MV</ListItem>
-          <ListItem>朋友</ListItem>
+          <ListItem onClick={() => browserHistory.push('/home/findMusic')}>发现音乐</ListItem>
+          <ListItem onClick={() => browserHistory.push('/home/privateFM')}>死人FM</ListItem>
+          <ListItem onClick={() => browserHistory.push('/home/mv')}>MV</ListItem>
+          <ListItem onClick={() => browserHistory.push('/home/firend')}>朋友</ListItem>
         </ul>
       </div>
     );

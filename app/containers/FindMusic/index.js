@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 
+import {
+  FindContainer, TopNav, NavItem,
+} from './components';
+
 class FindMusic extends Component {
   render() {
     return (
-      <div>
-        this is find music page
-      </div>
+      <FindContainer>
+        <TopNav>
+          <NavItem current>个性推荐</NavItem>
+          <NavItem>个性推荐</NavItem>
+          <NavItem>个性推荐</NavItem>
+          <NavItem>个性推荐</NavItem>
+          <NavItem>个性推荐</NavItem>
+        </TopNav>
+      </FindContainer>
     );
   }
 }
