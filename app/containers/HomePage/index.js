@@ -12,9 +12,11 @@ const HomeContainer = styled.div`
 
 export default class HomePage extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
+    const { children } = this.props;
     return (
       <HomeContainer>
         <LeftNav />
+        {children}
       </HomeContainer>
     );
   }

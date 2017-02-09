@@ -4,6 +4,7 @@ import {
   NavContainer,
 } from './components';
 import MenuList from 'components/MenuList';
+import CurrentPlay from 'components/CurrentPlay';
 
 class LeftNav extends Component {
   render() {
@@ -11,6 +12,7 @@ class LeftNav extends Component {
       <NavContainer>
         <MenuList />
         <MenuList />
+        <CurrentPlay />
       </NavContainer>
     );
   }

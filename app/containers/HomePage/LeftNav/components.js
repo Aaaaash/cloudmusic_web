@@ -5,4 +5,5 @@ export const NavContainer = styled.div`
   background-color: #F5F5F7;
   border-right: 1px solid #E1E1E2;
   height: 100%;
+  position: relative;
 `;
